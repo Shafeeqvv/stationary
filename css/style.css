@@ -5,6 +5,197 @@
       THEME STYLING START
 ========================================================*/
 
+/* Section Base */
+.about-modern-section {
+  padding: 100px 0;
+  background-color: #ffffff;
+  color: #2d3436;
+}
+
+.mb-huge { margin-bottom: 120px; }
+
+/* Image Stack Effect */
+.about-image-stack {
+  position: relative;
+  z-index: 1;
+}
+
+.about-image-stack .main-img {
+  width: 90%;
+  border-radius: 4px;
+  position: relative;
+  z-index: 2;
+  box-shadow: 20px 20px 0px -5px #f1f3f5; /* Light gray offset background */
+}
+
+.about-image-stack .decorative-box {
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  width: 150px;
+  height: 150px;
+  background: repeating-linear-gradient(45deg, #e9ecef, #e9ecef 2px, transparent 2px, transparent 10px);
+  z-index: 0;
+}
+
+/* Typography Styling */
+.accent-title {
+  color: #007bff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+.main-title {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 25px;
+}
+
+.text-outline {
+  color: transparent;
+  -webkit-text-stroke: 1px #007bff;
+}
+
+.summary-text {
+  font-size: 1.25rem;
+  color: #495057;
+  margin-bottom: 20px;
+}
+
+.detail-text {
+  color: #6c757d;
+  line-height: 1.8;
+}
+
+.location-tag {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 10px 20px;
+  border: 1px solid #dee2e6;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Vision Grid Styling */
+.vision-grid {
+  background: #f8f9fa;
+  padding: 60px;
+  border-radius: 0 100px 0 100px; /* Unique asymmetric corners */
+}
+
+.vision-small-label {
+  color: #adb5bd;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.vision-big-title {
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.divider-line {
+  width: 50px;
+  height: 4px;
+  background: #007bff;
+  margin-top: 20px;
+}
+
+.vision-description-box p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #495057;
+}
+
+.stat-item .stat-num {
+  display: block;
+  font-weight: 800;
+  color: #007bff;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.stat-item p {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+@media (max-width: 768px) {
+  .main-title { font-size: 2.2rem; }
+  .vision-grid { padding: 30px; border-radius: 20px; }
+}
+
+/* Container for the grid */
+.policy-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between boxes */
+}
+
+/* Individual column logic */
+.policy-item {
+  display: flex;
+  flex: 1 1 calc(33.333% - 20px); /* 3 boxes per row on desktop */
+  min-width: 300px; /* Ensures boxes don't get too thin on tablet */
+}
+
+/* The Box Styling */
+.policy-card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  
+  /* The Magic Trick: */
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Ensures it fills the flex-item width */
+}
+
+.card-number {
+  font-size: 14px;
+  font-weight: bold;
+  color: #d4af37;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.policy-card h5 {
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  color: #222;
+}
+
+.policy-card p {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.6;
+  margin: 0; /* Prevents extra bottom spacing */
+}
+
+/* Responsive: 2 per row on smaller screens */
+@media (max-width: 992px) {
+  .policy-item {
+    flex: 1 1 calc(50% - 20px);
+  }
+}
+
+/* Responsive: 1 per row on mobile */
+@media (max-width: 600px) {
+  .policy-item {
+    flex: 1 1 100%;
+  }
+}
+
 .arrival-block .item {
     width: 100%;
     overflow: hidden;
@@ -67,6 +258,27 @@ body {
 	font-size: 14px;
 	font-family: 'Montserrat', sans-serif;
 }
+
+
+
+html::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../images/cup.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 400px;
+    opacity: 0.05;
+    pointer-events: none;
+    z-index: 9999; /* Move it to the very top layer */
+}
+
+
+
 /*=======================================================
       WRAPPER
 ========================================================*/
