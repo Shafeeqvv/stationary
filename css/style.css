@@ -5,6 +5,79 @@
       THEME STYLING START
 ========================================================*/
 
+
+/* Ensure the parent container can handle the grid */
+.papular-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Force every card to be identical in size */
+.item {
+    width: 280px;        /* Fixed Width */
+    height: 380px;       /* Fixed Height for the whole card */
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid #eaeaea;
+    display: flex;
+    flex-direction: column; /* Stacks image on top of text */
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+/* Force the image area to be exactly the same height */
+.item-img {
+    width: 100%;
+    height: 280px;       /* Fixed Height for image area */
+    background-color: #fcfcfc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Make images fit perfectly inside the fixed area */
+.item-img img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain; /* Keeps the whole product visible without cropping */
+    transition: transform 0.5s ease;
+}
+
+/* Ensure text area fills the remaining space and centers text */
+.item-name {
+    flex-grow: 1;        /* Takes up the remaining card height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    text-align: center;
+    background: #ffffff;
+}
+
+.item-name a {
+    font-size: 15px;
+    font-weight: 600;
+    color: #333;
+    line-height: 1.2;
+    text-decoration: none;
+}
+
+/* Hover Effect */
+.item:hover {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transform: translateY(-5px);
+    border-color: #d1d1d1;
+}
+
+.item:hover img {
+    transform: scale(1.1);
+}
+
+
+
 /* Section Base */
 .about-modern-section {
   padding: 100px 0;
