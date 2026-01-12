@@ -1860,6 +1860,28 @@ header .is-sticky .sticky .user-basket .dropdown-menu {
 	text-align: center;
 	line-height: 21px;
 }
+
+@media (max-width: 850px) {
+	.papular-block .owl-prev,
+	.papular-block .owl-next {
+		top: auto;
+		bottom: -40px;          /* move arrows below items */
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	.papular-block .owl-prev {
+		margin-left: -25px;    /* space between arrows */
+	}
+
+	.papular-block .owl-next {
+		margin-left: 25px;
+	}
+}
+
+
+
+
 .papular-block .overlay {
 	background: rgba(255,255,21,0.75);
 	position: absolute;
